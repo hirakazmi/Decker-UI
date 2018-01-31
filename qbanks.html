@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Bootstrap Admin Template">
     <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
-    <title>Teaching Slide Library </title>
+    <title>Qbanks</title>
     <!-- Vendor styles-->
     <!-- build:css(../app) css/vendor.css-->
     <!-- Animate.CSS-->
@@ -13,7 +13,7 @@
     <!-- Bootstrap-->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
     <!-- Ionicons-->
-    <link rel="stylesheet" hrf="vendor/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="vendor/ionicons/css/ionicons.css">
     <!-- Bluimp Gallery-->
     <link rel="stylesheet" href="vendor/blueimp-gallery/css/blueimp-gallery.css">
     <link rel="stylesheet" href="vendor/blueimp-gallery/css/blueimp-gallery-indicator.css">
@@ -53,39 +53,38 @@
     <!-- Application styles-->
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-      .col-sm-12.actionBar{
-        display: none;
+      .invisible-select {
+          width: 149px;
       }
     </style>
   </head>
   <body class="theme-1">
     <div class="layout-container">
       <!-- top navbar-->
-     <header class="header-container">
-                 <nav>
-                   <ul class="visible-xs visible-sm">
-                     <li><a id="sidebar-toggler" href="#" class="menu-link menu-link-slide"><span><em></em></span></a></li>
+       <header class="header-container">
+             <nav>
+               <ul class="visible-xs visible-sm">
+                 <li><a id="sidebar-toggler" href="#" class="menu-link menu-link-slide"><span><em></em></span></a></li>
+               </ul>
+               <ul class="hidden-xs">
+                 <li><a id="offcanvas-toggler" href="#" class="menu-link menu-link-slide"><span><em></em></span></a></li>
+               </ul>
+               <div id="parent-logo" class="pull-left"><a href="index.html"> <img src="img/logo.png"></div></a>
+     <!--           <h2 class="header-title">Welcome Hira</h2>
+      -->          <ul class="pull-right">
+                 <li><a id="header-search" href="#" class="ripple"><em class="ion-ios-search-strong"></em></a></li>
+                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle has-badge ripple"><em class="ion-person"></em><sup class="badge bg-danger">3</sup></a>
+                   <ul class="dropdown-menu dropdown-menu-right md-dropdown-menu">
+                     <li><a href="index.html"><em class="ion-home icon-fw"></em>Profile</a></li>
+                     <li role="presentation" class="divider"></li>
+                     <li><a href="user.login.html"><em class="ion-log-out icon-fw"></em>Logout</a></li>
                    </ul>
-                   <ul class="hidden-xs">
-                     <li><a id="offcanvas-toggler" href="#" class="menu-link menu-link-slide"><span><em></em></span></a></li>
-                   </ul>
-                   <div id="parent-logo" class="pull-left"><a href="index.html"> <img src="img/logo.png"></div></a>
-         <!--           <h2 class="header-title">Welcome Hira</h2>
-          -->          <ul class="pull-right">
-                     <li><a id="header-search" href="#" class="ripple"><em class="ion-ios-search-strong"></em></a></li>
-                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle has-badge ripple"><em class="ion-person"></em><sup class="badge bg-danger">3</sup></a>
-                       <ul class="dropdown-menu dropdown-menu-right md-dropdown-menu">
-                         <li><a href="index.html"><em class="ion-home icon-fw"></em>Profile</a></li>
-                         <li><a href="messages.html"><em class="ion-chatbox-working icon-fw"></em>Messages</a></li>
-                         <li role="presentation" class="divider"></li>
-                         <li><a href="user.login.html"><em class="ion-log-out icon-fw"></em>Logout</a></li>
-                       </ul>
-                     </li>
-                     <li><a id="header-settings" href="#" class="ripple"><em class="ion-chatbox-working"></em></a></li>
+                 </li>
+                 <li><a id="header-settings" href="#" class="ripple"><em class="ion-chatbox-working"></em></a></li>
 
-                   </ul>
-                 </nav>
-               </header>
+               </ul>
+             </nav>
+           </header>
       <!-- sidebar-->
       <aside class="sidebar-container">
         <div id="sidebar-content">
@@ -189,75 +188,143 @@
       <main class="main-container">
         <!-- Page content-->
         <section>
-          <div class="content-heading bg-white">
+          <div class="content-heading bg-white pb0">
             <div class="row flex-start">
-              <div class="col-lg-5">
-                <h4 class="m0 text-thin"><img style="width: 28px;margin-right: 5px;" src="img/tlc.png">Teaching Slide Library</h4><small>Want to measure and sharpen surgical knowledge? <a href="">Check out the New Sci Am Surgery Qbanks!</a> </small>
+              <div class="col-lg-12">
+                <h4 class="m0 text-thin"><img style="width: 28px;margin-right: 5px;" src="img/qbanks.png">Qbanks</span></h4><small>Want to measure and sharpen surgical knowledge? <a href="">Check out the New Sci Am Surgery Qbanks!</a> </small>
               </div>
-             
+            </div>
+            <div class="row mt-20">
+              <ul role="tablist" class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Qbanks</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Create Tests</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Assign Tests</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">PD Logbook</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">How it Works</a></li>
+              </ul>              
             </div>
           </div>
           <div class="container-fluid">
-            <!-- START row-->
-            <div style="display: none;" class="row">
-              <div class="col-lg-4">
-                <div class="card">
-                  <div class="card-heading">
-                    <div class="card-title">Bar</div>
-                  </div>
-                  <div class="card-body">
-                    <div id="bar-flotchart" class="flot-chart flot-chart-lg"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- END row-->
-            <!-- START row-->
-           
-            <!-- END row-->
-            <!-- START row-->
             <div class="row">
-
-             
-              <div class="col-lg-3">
-
-                    <div class="card">
-                      <div class="card-item"><img src="img/pic4.jpg" alt="MaterialImg" class="fw img-responsive">
-                        <div class="card-item-text">Alergic Reaction to Hymnetopia</div>
-                      </div>
-                      <div class="card-offset">
-                       
-                      </div>
-                      <div class="card-body pt0">
-                        <p class="m0"><span class="mr-sm text-muted"></span><a href="#">Allergy and Immunology</a></p>
-                      </div>
+              <div class="col-lg-12">
+                <div class="card">
+                  <div style="padding: 0 16px;" class="card-heading">
+                    <div class="card-title flex-between mv">
+                      
+                          Your Created Qbanks Tests
+                      <div class="flex-center-around" style="width: 50%;">   
+                        
+                        <div class="pull-right dropdown">
+                          <div class="border-btm">
+                              <select name="account" class="invisible-select">
+                                <option>Qbanks</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="pull-right dropdown">
+                          <div class="border-btm">
+                              <select name="account" class="invisible-select">
+                                <option>My Tests</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="pull-right dropdown">
+                          <div class="border-btm">
+                              <select name="account" class="invisible-select">
+                                <option>Newest</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-success">Filter</button>
+                        </div>
+                      </div> 
                     </div>
-              </div>
-                <div class="col-lg-3">
-                    <div class="card">
-                      <div class="card-item"><img src="img/pic4.jpg" alt="MaterialImg" class="fw img-responsive">
-                        <div class="card-item-text">Alergic Reaction to Hymnetopia</div>
-                      </div>
-                      <div class="card-offset">
+                  </div>
+                  <div class="card mb0 br0">
+                    <ul class="mda-list">
+                      <li class="mda-list-item">
+                         <div class="mda-list-item-text bt">
+                          <div class="flex-between">
+                            <div>
+                            <h3>Patient Care - Abdomen - General</h3>
+                               <h4 class="text-small" style="width: 80%; line-height: 1.2;" >Readings: <a class="ml-sm" href=""> Breast Cancer | Soft Tissue Infection | Principles of Wound Management and Soft-Tissue Repair | Surgical Management of Melanoma and Other Skin Cancers | Breast Procedures | Lymphatic Mapping and Sentinel Node </a></h4>
+                            </div>   
+                            <div class="flex-center">
+                              
+                            <button  type="button" class="mr-sm mb-sm btn btn-primary ripple">Resume Test</button>
+                            </div>
+                          </div>
+                        </div>
+                         <div class="mda-list-item-text bt">
+                          <div class="flex-between">
+                            <div>
+                            <h3>Patient Care - Abdomen - General</h3>
+                               <h4 class="text-small" style="width: 80%; line-height: 1.2;" >Readings: <a class="ml-sm" href=""> Breast Cancer | Soft Tissue Infection | Principles of Wound Management and Soft-Tissue Repair | Surgical Management of Melanoma and Other Skin Cancers | Breast Procedures | Lymphatic Mapping and Sentinel Node </a></h4>
+                            </div>   
+                            <div class="flex-center">
+                              
+                            <button  type="button" class="mr-sm mb-sm btn btn-primary ripple">Resume Test</button>
+                            
+                            </div>
+                          </div>
+                        </div>
+                         <div class="mda-list-item-text bt">
+                          <div class="flex-between">
+                            <div>
+                            <h3>Patient Care - Abdomen - General</h3>
+                               <h4 class="text-small" style="width: 80%; line-height: 1.2;" >Readings: <a class="ml-sm" href=""> Breast Cancer | Soft Tissue Infection | Principles of Wound Management and Soft-Tissue Repair | Surgical Management of Melanoma and Other Skin Cancers | Breast Procedures | Lymphatic Mapping and Sentinel Node </a></h4>
+                            </div>   
+                            <div class="flex-center">
+                              
+                            <button  type="button" class="mr-sm mb-sm btn btn-primary ripple">Resume Test</button>
+                           
+                            </div>
+                          </div>
+                        </div>
+                         <div class="mda-list-item-text bt">
+                          <div class="flex-between">
+                            <div>
+                            <h3>Patient Care - Abdomen - General</h3>
+                               <h4 class="text-small" style="width: 80%; line-height: 1.2;" >Readings: <a class="ml-sm" href=""> Breast Cancer | Soft Tissue Infection | Principles of Wound Management and Soft-Tissue Repair | Surgical Management of Melanoma and Other Skin Cancers | Breast Procedures | Lymphatic Mapping and Sentinel Node </a></h4>
+                            </div>   
+                            <div class="flex-center">
+                              
+                            <button  type="button" class="mr-sm mb-sm btn btn-primary ripple">Resume Test</button>
+                            
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mda-list-item-text bt">
+                          <div class="flex-between">
+                            <div>
+                            <h3>Patient Care - Abdomen - General</h3>
+                               <h4 class="text-small" style="width: 80%; line-height: 1.2;" >Readings: <a class="ml-sm" href=""> Breast Cancer | Soft Tissue Infection | Principles of Wound Management and Soft-Tissue Repair | Surgical Management of Melanoma and Other Skin Cancers | Breast Procedures | Lymphatic Mapping and Sentinel Node </a></h4>
+                            </div>   
+                            <div class="flex-center">
+                              
+                            <button  type="button" class="mr-sm mb-sm btn btn-primary ripple">Resume Test</button>
+                            
+                            </div>
+                          </div>
+                        </div>
                        
-                      </div>
-                      <div class="card-body pt0">
-                        <p class="m0"><span class="mr-sm text-muted"></span><a href="#">Allergy and Immunology</a></p>
-                      </div>
-                    </div>
-              </div>
-                <div class="col-lg-3">
-                    <div class="card">
-                      <div class="card-item"><img src="img/pic4.jpg" alt="MaterialImg" class="fw img-responsive">
-                        <div class="card-item-text">Alergic Reaction to Hymnetopia</div>
-                      </div>
-                      <div class="card-offset">
-                       
-                      </div>
-                      <div class="card-body pt0">
-                        <p class="m0"><span class="mr-sm text-muted"></span><a href="#">Allergy and Immunology</a></p>
-                      </div>
-                    </div>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                  </div>
+                  <a href="" class="card-footer btn btn-flat btn-default"><small class="text-center text-muted lh1">Random CTA possibility</small></a>
+                </div>
               </div>
           </div>
         </section>
@@ -340,19 +407,19 @@
       </div>
       <!-- /.modal-dialog-->
     </div>
-    <div tabindex="-1" role="dialog" class="modal modal-top fade modal-search">
+    <div class="modal modal-top fade modal-search" tabindex="-1" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
             <div class="pull-left">
-              <button type="button" data-dismiss="modal" class="btn btn-flat"><em class="ion-arrow-left-c icon-24"></em></button>
+              <button class="btn btn-flat" type="button" data-dismiss="modal"><em class="ion-arrow-left-c icon-24"></em></button>
             </div>
             <div class="pull-right">
-              <button type="button" class="btn btn-flat"><em class="ion-android-microphone icon-24"></em></button>
+              <button class="btn btn-flat" type="button"><em class="ion-android-microphone icon-24"></em></button>
             </div>
-            <form action="#" class="oh">
+            <form class="oh" action="#">
               <div class="mda-form-control pt0">
-                <input type="text" placeholder="Search.." data-localize="header.SEARCH" class="form-control header-input-search">
+                <input class="form-control header-input-search" type="text" placeholder="Search.." data-localize="header.SEARCH">
                 <div class="mda-form-control-line"></div>
               </div>
             </form>
@@ -362,12 +429,12 @@
     </div>
     <!-- End Search template-->
     <!-- Settings template-->
-    <div tabindex="-1" role="dialog" class="modal-settings modal modal-right fade">
+    <div class="modal-settings modal modal-right fade" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <div data-dismiss="modal" class="pull-right clickable"><em class="ion-close-round text-soft"></em></div>
-            <h4 class="modal-title"><span>Settings</span></h4>
+            <div class="pull-right clickable" data-dismiss="modal"><em class="ion-close-round text-soft"></em></div>
+            <h4 class="modal-title"><span>Resident Chat</span></h4>
           </div>
           <div class="modal-body">
             <div class="clearfix mb">
@@ -499,7 +566,7 @@
               </div>
             </div>
             <hr>
-            <p>
+           <!--  <p>
               <label class="mda-checkbox">
                 <input id="sidebar-showheader" type="checkbox" checked=""><em class="bg-indigo-500"></em>Sidebar header
               </label>
@@ -532,13 +599,13 @@
               </label>
             </p>
             <hr>
-            <button type="button" data-toggle-fullscreen="" class="btn btn-default btn-raised">Toggle fullscreen</button>
+            <button class="btn btn-default btn-raised" type="button" data-toggle-fullscreen="">Toggle fullscreen</button>
             <hr>
-            <p>Change language</p>
+            <p>Change language</p> -->
             <!-- START Language list-->
             <div class="btn-group">
-              <button type="button" data-toggle="dropdown" class="btn btn-default btn-block btn-raised">English</button>
-              <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+              <button class="btn btn-default btn-block btn-raised" type="button" data-toggle="dropdown">English</button>
+              <ul class="dropdown-menu dropdown-menu-right animated fadeInUpShort" role="menu">
                 <li><a href="#" data-set-lang="en">English</a></li>
                 <li><a href="#" data-set-lang="es">Spanish</a></li>
               </ul>
@@ -647,3 +714,12 @@
     <script src="js/app.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+

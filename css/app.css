@@ -1248,6 +1248,11 @@ tr.danger > td {
   align-items: center;
   justify-content: center;
 }
+.flex-center-around{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .flex-center-between{
   display: flex !important;
   align-items: center;

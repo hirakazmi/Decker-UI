@@ -7439,11 +7439,11 @@ body:last-child .blueimp-gallery > .play-pause {
   background-color: #263238;
   color: rgba(255, 255, 255, 0.75);
   z-index: 20;
-  transition: 1s ease;
+  transition: 0.8s ease;
 }
 .sidebar-container:hover{
   width: 170px;
-  transition: 1s ease;
+  transition: 0.8s ease;
 }
 .sidebar-label{
   font-size: 12px;
@@ -7460,7 +7460,7 @@ body:last-child .blueimp-gallery > .play-pause {
 }
 .sidebar-container:hover ~ .main-container {
     margin-left:170px;
-    transition: 1s ease;
+    transition: 0.8s ease;
 
 }
 

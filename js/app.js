@@ -890,9 +890,9 @@
 (function() {
     'use strict';
 
-    $(initDashboard);
+    $(initindex);
 
-    function initDashboard() {
+    function initindex() {
 
         if (!$.fn.plot || !$.fn.easyPieChart) return;
 
@@ -1260,7 +1260,7 @@
                 enabled: true
             }
         };
-        $('#dashboard-easypiechartTask').easyPieChart(pieOptionsTask);
+        $('#index-easypiechartTask').easyPieChart(pieOptionsTask);
 
 
         // Vector Map
@@ -1338,7 +1338,7 @@
         // Datepicker
         // -----------------
 
-        $('#dashboard-datepicker').datepicker();
+        $('#index-datepicker').datepicker();
 
         // Sparklines
         // -----------------
@@ -3022,7 +3022,7 @@
             submitHandler: function(/*form*/) {
                 // form.submit();
                 console.log('Form submitted!');
-                // move to dashboard
+                // move to index
                 window.location.href = 'index.html';
             }
         });

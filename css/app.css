@@ -1693,7 +1693,7 @@ div#carousel-example-generic{
   visibility: hidden !important;
 }
 
-/********BOOTGRID DASHBOARD TABLE ********
+/********BOOTGRID index TABLE ********
 */
 .table-responsive.bootgrid{
   width: 100%;
@@ -7888,7 +7888,7 @@ table.dataTable thead .sorting_desc_disabled {
   flex-direction: row;
   flex-wrap: wrap;
 }
-#contents-container li {
+#contents-container a {
   width: 33%;
   margin-bottom:10px;
 }
